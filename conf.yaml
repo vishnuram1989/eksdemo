@@ -1,0 +1,16 @@
+######cluster Spec########
+action: create
+
+eks_cluster_name: demo-k8s
+region: us-east-2
+
+vpc_name: vpc-0c3f1ff3575cb0efa
+cidr: 10.102.224.0/19
+
+zones : ["us-east-1a", "us-east-1b", "us-east-1c"]
+
+
+public_access: true
+private_access:  false
+
+NodeGroup: disabled

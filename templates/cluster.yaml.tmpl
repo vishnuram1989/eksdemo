@@ -1,0 +1,24 @@
+apiVersion:  eksctl.io/v1alpha5
+kind:  ClusterConfig
+
+metadata:
+  name: {{ .Name}}
+  region: {{ .Region }}
+
+vpc: 
+  id: {{ .Vpc_name }}
+  cidr: {{ .Cidr }}
+
+  subnets: 
+    private:
+      {{ range  .Zones }}
+      {{ end }}
+
+clusterEndpoints:
+  Private_Access: {{ .Private_Access }}
+  Public_Access: {{ .Public_Access }}
+
+{{ if and (eq .NodeGroup "enabled") }}
+nodeGroups:
+  - name: DemoWorker2
+{{ end }}
