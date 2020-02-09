@@ -1,4 +1,4 @@
-package internal
+package packages
 
 type Conf struct {
 	Action         string   `yaml:"action"`
