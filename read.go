@@ -2,10 +2,7 @@ package main
 
 import (
 	"fmt"
-
 	"gopkg.in/yaml.v2"
-	//"github.com/ghodss/yaml"
-
 	"html/template"
 	"io/ioutil"
 	"log"
